@@ -1,0 +1,306 @@
+/* body
+{
+    background-color: rgb(246, 252, 255);
+}
+.navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom: 2px solid gray;
+    background-color: white;
+    color: black;
+}
+.navul
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+li
+{
+    padding-left: 10px;
+    margin-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+li:hover {
+    text-decoration: underline black 1px;
+    color:red;
+}
+.wel
+{   text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 30px;
+}
+
+.profile
+{
+    align-items: center;
+    background-color: white;
+    color:black;
+    margin: 3vh 20vh 0vh 20vh;
+    height: 20vh;
+    padding: 5vh  15vh;
+    border: 2px solid black;
+    box-shadow: 3px black;
+
+    
+}
+
+.namediv
+{
+    align-items: center;
+    text-align: center;
+}
+
+.skills
+{
+align-items: center;
+background-color: white;
+color:black;
+margin: 3vh 20vh 5vh 20vh;
+height: 29vh;
+padding: 3vh  15vh;
+border: 2px solid black;
+box-shadow: 3px black;
+}
+
+.techname
+{
+text-align: center;
+text-decoration: 2px underline black;
+}
+
+.techul
+{
+border:1px solid gray;
+height: 18vh;
+width: auto;
+padding:2vh 0 0 2vh ;
+}
+
+.techli
+{
+padding: 10px;
+list-style: circle red;
+}
+
+.projects
+{
+align-items: center;
+background-color: white;
+color:black;
+margin: 3vh 20vh 0vh 20vh;
+height: 40vh;
+padding: 3vh  15vh;
+border: 2px solid black;
+box-shadow: 3px black;
+}
+
+.proname
+{
+text-align: center;
+text-decoration: 2px underline black;
+}
+
+.proul
+{
+height: 25vh;
+width: auto;
+padding:2vh 0 0 1vh ;
+}
+
+.proli
+{
+padding: 10px;
+list-style: circle red;
+}
+.footers
+{
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid black;
+    padding:5vh;
+    margin-top:4vh ;
+} */
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.resume {
+    background-color: #fff;
+    max-width: 900px;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.left-section {
+    background-color: #72a5bd;
+    color: #fff;
+    padding: 40px;
+    width: 35%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-info img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 5px solid #555;
+}
+
+.profile-info h2 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    color: #eee;
+}
+
+.profile-info .profession {
+    font-size: 1.1em;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    color: #ddd;
+}
+
+.contact i {
+    margin-right: 10px;
+    color: #eee;
+}
+
+.contact a {
+    color: #eee;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.skills-section, .education-section {
+    margin-top: 30px;
+}
+
+.skills-section h3, .education-section h3 {
+    font-size: 1.4em;
+    border-bottom: 2px solid #555;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.skills-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-section li {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #ddd;
+}
+
+.skills-section li strong {
+    color: #eee;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-item h4 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #eee;
+}
+
+.education-item p {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-bottom: 3px;
+}
+
+.right-section {
+    padding: 40px;
+    width: 65%;
+}
+
+.summary-section h3, .projects-section h3 {
+    font-size: 1.8em;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.summary-section p {
+    font-size: 1em;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.project-item {
+    margin-bottom: 30px;
+}
+
+.project-item h4 {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.project-item .description {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.project-item .tech-used {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.project-item .tech-used strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* You can add more specific styling or responsive design here */

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Activity Rank Tool</title>
+</head>
+<body>
+    <h2>Check the console for results</h2>
+
+    <script>
+        // Global Variables
+        var studentName = "Anika";
+        var activityScores = [10, 20, 15, 5];
+
+        console.log("Student:", studentName);
+        console.log("Activity Scores:", activityScores);
+
+        // Function Declaration
+        function calculateTotal() {
+            let total = 0;
+            for (let i = 0; i < activityScores.length; i++) {
+                total += activityScores[i];
+            }
+            return total;
+        }
+
+        // Function Expression
+        const evaluateRank = function(totalScore) {
+            if (totalScore > 40) return "Star Performer";
+            else if (totalScore >= 30) return "Active";
+            else return "Inactive";
+        };
+
+        // Anonymous Function (stored in variable)
+        const calculateAverage = function() {
+            return calculateTotal() / activityScores.length;
+        };
+
+        // Hoisting Example
+        console.log("Category before declaration:", category); // undefined
+        var category = "Test Hoisting";
+
+        // Scope Isolation Test
+        if (true) {
+            var isolatedVar = "I'm inside an if block!";
+        }
+        console.log("Accessing var outside block:", isolatedVar); // var is function scoped, not block scoped
+
+        // Lexical Scope with Nested Function
+        function generateReport() {
+            let totalScore = calculateTotal();
+            let average = calculateAverage();
+            let rank = evaluateRank(totalScore);
+
+            function showDetails() {
+                // Accessing outer function variables
+                console.log("Report:");
+                console.log(" Student:", studentName);
+                console.log(" Rank:", rank);
+                if (rank === "Star Performer") {
+                    console.log(" Message: Great job on co-curriculars!");
+                } else if (rank === "Active") {
+                    console.log(" Message: Keep pushing yourself!");
+                } else {
+                    console.log(" Message: Try to get more involved!");
+                }
+            }
+
+            // Output Section
+            console.log("Total Score:", totalScore);
+            console.log("Average Score:", average);
+            console.log("Rank:", rank);
+            showDetails(); // Call nested function
+        }
+
+        // Generate the report
+        generateReport();
+    </script>
+</body>
+</html>

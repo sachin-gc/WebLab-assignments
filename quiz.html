@@ -1,0 +1,82 @@
+<!-- Name : Sachin GC  | USN : 1MS23CS410 --> 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Quiz App</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        button { margin: 5px; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h2>3-Question Quiz</h2>
+    <button onclick="askQuestion1()">Start Question 1</button>
+    <button onclick="askQuestion2()">Start Question 2</button>
+    <button onclick="askQuestion3()">Start Question 3</button>
+    <button onclick="showScore()">Show Final Score</button>
+    <button onclick="reviewScore()">Try to Access Local Score (Bonus)</button>
+
+    <script>
+        // Global variable
+        var score = 0;
+
+        // Function Declaration - hoisted (can be used before it's defined)
+        function askQuestion1() {
+            var answer = prompt("Question 1: What is the capital of France?");
+            if (answer && answer.toLowerCase() === "paris") {
+                alert("Correct!");
+                score++;
+            } else {
+                alert("Wrong! It's Paris.");
+            }
+        }
+
+        // Function Expression - not hoisted
+        const askQuestion2 = function() {
+            var answer = prompt("Question 2: What is 2 + 2?");
+            if (parseInt(answer) === 4) {
+                alert("Correct!");
+                score++;
+            } else {
+                alert("Wrong! It's 4.");
+            }
+        };
+
+        // Arrow function - also a function expression (not hoisted)
+        const askQuestion3 = () => {
+            // Demonstrating hoisting of var
+            console.log("Before declaration, typeof tempVar: " + typeof tempVar); // undefined
+            var tempVar = "I'm hoisted!";
+            console.log("After declaration, tempVar: " + tempVar);
+
+            var answer = prompt("Question 3: What color is the sky on a clear day?");
+            if (answer && answer.toLowerCase() === "blue") {
+                alert("Correct!");
+                score++;
+            } else {
+                alert("Wrong! It's blue.");
+            }
+        };
+
+        // Final score display
+        function showScore() {
+            alert("Your final score is: " + score + " out of 3.");
+        }
+
+        // Bonus: Try to access local variable from outside
+        function reviewScore() {
+            try {
+                alert("Trying to access localScore: " + localScore);
+            } catch (err) {
+                alert("Error: Cannot access local variable 'localScore' outside its function scope.");
+            }
+        }
+
+        // Unused local scoped variable example (bonus)
+        function dummyFunction() {
+            let localScore = 42; // This cannot be accessed from reviewScore()
+        }
+    </script>
+</body>
+</html>
